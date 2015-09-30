@@ -116,13 +116,13 @@ public class DataHandler {
 	}
 	
 	public boolean saveTasks() {
-		FileHandler fileHandler = new FileHandler(".Data/.tasks.txt");
+		FileHandler fileHandler = new FileHandler(".data/.tasks.txt");
 		fileHandler.serializeData(categories);
 		return true;
 	}
 	
 	private void loadTasks() {
-		FileHandler fileHandler = new FileHandler(".Data/.tasks.txt");
+		FileHandler fileHandler = new FileHandler(".data/.tasks.txt");
 		categories = (HashMap<String, ArrayList<Task>>)fileHandler.deserializeData();
 	}
 	
